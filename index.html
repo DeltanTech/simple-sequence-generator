@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hello">
+  <link rel="stylesheet" href="./assets/css/sanitize.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/app.js" defer></script>
+  <title>数列生成器</title>
+</head>
+<body>
+  <section>
+    <h1 class="title">数列生成器</h1>
+    <p>数Bはもう、怖くない。</p>
+  </section>
+  <section class="table">
+    <h1>数列を生成してみよう</h1>
+    <table>
+      <tr>
+        <th>
+          <label for="js-first-term">初項</label> 
+        </th>
+        <td>
+          <input type="number" id="js-first-term" placeholder="初項を入力">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="js-value">値</label>
+        </th>
+        <td>
+          <input type="number" id="js-value">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="js-sequence-type">方式</label>
+        </th>
+        <td>
+          <select id="js-sequence-type">
+            <option value="">-- 数列タイプを選択 --</option>
+            <option value="arithmetic">等差数列</option>
+            <option value="geometric">等比数列</option>
+            <option value="" disabled>階差数列(準備中)</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="js-terms">項数</label>
+        </th>
+        <td>
+          <input type="number" id="js-terms" placeholder="求めたい項数を入力">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <button id="js-submit-btn">実行</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p id="js-warning-text" style="display: none; color: red;">入力欄に不備があります。</p>
+        </td>
+      </tr>
+    </table>
+    <div class="output">
+      <textarea cols="50" rows="10" id="js-output" placeholder="ここに出力結果が表示されます" readonly></textarea>
+      <input type="number" id="js-search-term" placeholder="求めたい数列の値の項を入力">
+      <button id="js-search-term-btn">項を検索</button>
+      <p id="js-search-term-output"></p>
+    </div>
+  </section>
+</body>
+</html>
